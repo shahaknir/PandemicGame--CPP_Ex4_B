@@ -1,40 +1,54 @@
-#include <iostream>
-#include <stdexcept>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <unordered_map>
+#pragma once
 
-#include "Color.hpp"
+enum City
+{
+    Algiers,
+    Atlanta,
+    Baghdad,
+    Bangkok,
+    Beijing,
+    Bogota,
+    BuenosAires,
+    Cairo,
+    Chennai,
+    Chicago,
+    Delhi,
+    Essen,
+    HoChiMinhCity,
+    HongKong,
+    Istanbul,
+    Jakarta,
+    Johannesburg,
+    Karachi,
+    Khartoum,
+    Kinshasa,
+    Kolkata,
+    Lagos,
+    Lima,
+    London,
+    LosAngeles,
+    Madrid,
+    Manila,
+    MexicoCity,
+    Miami,
+    Milan,
+    Montreal,
+    Moscow,
+    Mumbai,
+    NewYork,
+    Osaka,
+    Paris,
+    Riyadh,
+    SanFrancisco,
+    Santiago,
+    SaoPaulo,
+    Seoul,
+    Shanghai,
+    StPetersburg,
+    Sydney,
+    Taipei,
+    Tehran,
+    Tokyo,
+    Washington
 
-using namespace std;
-class node;
-
-namespace pandemic {
-    class City{
-        public:
-            
-        
-        private:
-            string name;
-            unsigned int population;
-            Color disease_type;
-            unordered_map<int, string> neighbors;
-
-            
-
-
-    };
-
-    class node{
-        public:
-
-        private:
-            string name;
-            Color color;
-            unsigned int disease_cubes;
-            bool research_sta;
-
-
-    };
-}
+};

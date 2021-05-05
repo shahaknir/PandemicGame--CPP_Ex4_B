@@ -1,30 +1,18 @@
-#include <iostream>
-#include <stdexcept>
+//
+// Created by Shahak Nir on 04/05/2021.
+//
+
 #include "Player.hpp"
+
 using namespace std;
 
 namespace pandemic{
-    
+
     class OperationsExpert : public Player{
 
-        public:
-            OperationsExpert();
-            OperationsExpert(Board b, City c);
+    public:
 
-            // Player's actions
-            void take_card(City c);
-            void bulid();
-
-            // Player's movement
-            void drive(const City& c);
-            void fly_direct(const City& c);
-            void fly_charter(const City& c);
-            void fly_shuttle(const City& c);
-
-            // Player's skills
-            int treat(const City& c);
-            void discover_cure(const Color& col);
-
+        OperationsExpert(Board b, City c);
 
     };
 
