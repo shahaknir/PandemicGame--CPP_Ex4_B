@@ -11,12 +11,13 @@
 using namespace std;
 
 namespace pandemic{
+    // class Board{
 
-    // Constructors
+    // Constractors
     Board::Board(){
 
     }
-
+    // Board
 
     // [] Operator reading and writing
     int & Board::operator[](City city){
@@ -24,28 +25,24 @@ namespace pandemic{
             return cubes.at(city);        
         }catch(const std::out_of_range){
             cout << "city not in map"<< endl;
-            cubes[city] = 0;
-            return cubes.at(city);
         }
     }
 
 
 
     // Ostream Operator
-    ostream& operator<<(ostream& os, const Board b){
-        return os;
-    }
+    ostream& operator<<(ostream& os, const Board b);
 
     // Boolean is the board clean of pandemics
-    bool Board::is_clean(){
-        return true;
-    }
-
-    void Board::remove_cures(){
-
-    }
+    bool is_clean();
 
 
+    
+    unsigned int research_station_remaining = 6;
+    
+    // unordered_map<string, node> city
+    unordered_map<string, City> city_map;
+    // };
 
 
 

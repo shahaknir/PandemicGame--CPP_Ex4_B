@@ -18,8 +18,9 @@ namespace pandemic{
             map<City, int> cubes; 
         public:
 
-            // Constructors
+            // Constractors
             Board();
+            // Board
 
             // [] Operator reading and writing
             int & operator[](City city);
@@ -30,7 +31,17 @@ namespace pandemic{
             // Boolean is the board clean of pandemics
             bool is_clean();
 
-            void remove_cures();
+
+
+
+
+
+        private:
+            
+            unsigned int research_station_remaining = 6;
+            
+            // unordered_map<string, node> city
+            unordered_map<string, City> city_map;
     };
 
 

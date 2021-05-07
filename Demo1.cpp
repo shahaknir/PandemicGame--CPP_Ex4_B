@@ -27,7 +27,7 @@ int main() {
 
 	OperationsExpert player {board, City::Atlanta};  // initialize an "operations expert" player on the given board, in Atlanta.
 	player.take_card(City::Johannesburg)
-		.take_card(City::Khartoum)
+	 .take_card(City::Khartoum)
 	 .take_card(City::SaoPaulo)
 	 .take_card(City::BuenosAires)
 	 .take_card(City::HoChiMinhCity);
@@ -152,3 +152,4 @@ int main() {
 	cout << board << endl;  // prints the board in any reasonable format.
 	cout << board.is_clean() << endl;  // prints "1" - the board is clean - congratulations!!! You treated all diseases!!!
 }
+

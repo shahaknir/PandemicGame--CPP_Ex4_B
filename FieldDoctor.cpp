@@ -1,16 +1,58 @@
-//
-// Created by Shahak Nir on 04/05/2021.
-//
+#include <iostream>
+#include <stdexcept>
 
-#include "FieldDoctor.hpp"
+#include "Player.hpp"
 
 using namespace std;
 
 namespace pandemic{
+    
+    class FieldDoctor : public Player{
 
-    FieldDoctor::FieldDoctor(Board board, City city):Player(board, city)
-    {
+        public:
+            FieldDoctor (){
+                
+            }
+            FieldDoctor (Board b, City c){
+                
+            }
 
-    }
+            // Player's actions
+            void take_card(City c){
+                
+            }
+
+            void bulid(){
+                
+            }
+
+            // Player's movement
+            void drive(const City& c){
+                
+            }
+
+            void fly_direct(const City& c){
+                
+            }
+
+            void fly_charter(const City& c){
+                
+            }
+
+            void fly_shuttle(const City& c){
+                
+            }
+
+            // Player's skills
+            int treat(const City& c){
+                return 0;
+            }
+            
+            void discover_cure(const Color& col){
+                
+            }
+
+
+    };
 
 }
