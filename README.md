@@ -1,4 +1,4 @@
-pandemic
+
 <div dir="rtl" lang="he">
 
 # פאנדמיק
