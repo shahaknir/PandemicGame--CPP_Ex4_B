@@ -5,11 +5,11 @@
  * Since : 2021-04
  */
 
-#include "Board.hpp"
-#include "City.hpp"
-#include "Color.hpp"
+#include "sources/Board.hpp"
+#include "sources/City.hpp"
+#include "sources/Color.hpp"
 
-#include "OperationsExpert.hpp"
+#include "sources/OperationsExpert.hpp"
 
 using namespace pandemic;
 
@@ -27,7 +27,7 @@ int main() {
 
 	OperationsExpert player {board, City::Atlanta};  // initialize an "operations expert" player on the given board, in Atlanta.
 	player.take_card(City::Johannesburg)
-	 .take_card(City::Khartoum)
+		.take_card(City::Khartoum)
 	 .take_card(City::SaoPaulo)
 	 .take_card(City::BuenosAires)
 	 .take_card(City::HoChiMinhCity);
@@ -152,4 +152,3 @@ int main() {
 	cout << board << endl;  // prints the board in any reasonable format.
 	cout << board.is_clean() << endl;  // prints "1" - the board is clean - congratulations!!! You treated all diseases!!!
 }
-
