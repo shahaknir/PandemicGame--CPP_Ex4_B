@@ -33,20 +33,21 @@ namespace pandemic
         Player& take_card(City city);
 
         // Player throws card
-        Player& throws_card(City city);
+        virtual Player& throws_card(City city);
 
-
+        virtual Player& treat(City city);
 
         virtual void discover_cure(Color color);
+
+        virtual Player& build();
 
         // Player's movement
         virtual Player& drive(City city);
         virtual Player& fly_direct(City city);
         virtual Player& fly_charter(City city);
         virtual Player& fly_shuttle(City city);
-        virtual Player& build();
 
-        virtual Player& treat(City city);
+
 
         City& getCurrCity();
     };

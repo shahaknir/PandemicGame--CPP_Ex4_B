@@ -28,6 +28,7 @@ namespace pandemic{
             index++;
             if(card == city){
                 cards.erase(cards.begin()+index);
+                break;
             }
         }
         return *this;
@@ -62,6 +63,7 @@ namespace pandemic{
     }
 
     // Player's movement
+    // Moving to a neighbor city
     Player& Player::drive(City city) {
         Board _b = this->board;
         City _c = this->currCity;
@@ -71,6 +73,7 @@ namespace pandemic{
         return *this;
     }
 
+    // Throw the card of the city we want to go to
     Player& Player::fly_direct(City city){
         if(cards.at(city)){
             this->currCity = city;
@@ -79,14 +82,18 @@ namespace pandemic{
         return *this;
     }
 
+    // Throw the card of the city we are in
     Player& Player::fly_charter(City city){
-        if(cards.at(city)){
+        City _c = this->currCity;
+        if(cards.at(_c)){
             this->currCity = city;
-            this->throws_card(city);
+            this->throws_card(_c);
         }
         return *this;
     }
 
+    // If current city and destination has research
+    // station - fly straight there
     Player& Player::fly_shuttle(City city){
         Board _b = this->board;
         City _c = this->currCity;
@@ -112,18 +119,15 @@ namespace pandemic{
 
     Player& Player::treat(City city){
         Board& _b = this->board;
-        City _c = this->currCity;
         Color clr = _b.citiesMapBoard.at(city).cityColor;
         if(_b.citiesMapBoard.at(city).diseaseLv != 0){
-            if(_b.citiesMapBoard.at(city).diseaseLv != 0){
-                if(!_b.diseaseEradicate[clr]){
-                    _b.citiesMapBoard.at(city).diseaseLv--;
-                }else{
-                    _b.citiesMapBoard.at(city).diseaseLv = 0;
-                }
+            if(!_b.diseaseEradicate[clr]){
+                _b.citiesMapBoard.at(city).diseaseLv--;
+            }else{
+                _b.citiesMapBoard.at(city).diseaseLv = 0;
             }
         }else{
-            throw "The Infection Level is: 0\n Therefore This Act Can't be Done";
+            throw "The Infection Level is: 0\n Therefore This Act Can't be Done\n";
         }
         return *this;
     }
