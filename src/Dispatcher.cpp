@@ -1,13 +1,8 @@
-/*
- *  Created by shahak on 07/05/2021.
- */
+//
+//Created by shahak on 07/05/2021.
+//
 
-#include <iostream>
-#include <stdexcept>
 #include <string>
-#include <fstream>
-#include <sstream>
-#include <unordered_map>
 
 #include "Dispatcher.hpp"
 
@@ -15,9 +10,25 @@ using namespace std;
 
 namespace pandemic{
 
-    Dispatcher::Dispatcher(Board board, City city):Player(board, city){
+    Dispatcher::Dispatcher(Board board, City city):Player(board, city){}
 
+    // Returns Player's Role in the Game - has no use in Player
+    string Dispatcher::role(){
+        string dispatcherole;
+        dispatcherole = "The Dispatcher can fly direct to any "
+                      "destination if the city he currently in - "
+                      "has a research station in it";
+        return dispatcherole;
     }
 
+    // Dispatcher can fly directly to where ever he wish
+    // if there ia a research station in his current city
+    Player& Dispatcher::fly_direct(City city){
+        Board _b = this->board;
+        City _c = this->currCity;
+        if(_b.citiesMapBoard.at(_c).RStationFlag){
+            this->currCity = city;
+        }
+    }
     
 }
