@@ -18,6 +18,12 @@ namespace pandemic{
 
             GeneSplicer(Board b, City c);
 
+            // Returns Player's Role in the Game - has no use in Player
+            string role();
+
+            // Can find cure with any 5 cards
+            void discover_cure(Color color) override;
+
     };
 
 }
