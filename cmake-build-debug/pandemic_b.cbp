@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="pandemic_b"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pandemic_b">
+				<Option output="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/pandemic_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 pandemic_b"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pandemic_b/fast">
+				<Option output="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/pandemic_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shahak/CLionProjects/pandemic-b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 pandemic_b/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/shahak/CLionProjects/pandemic-b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/Demo1.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/Test.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/TestCounter.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/TestRunner.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/doctest.h">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/pandemic.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Board.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Board.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/City.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Color.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Dispatcher.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Dispatcher.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/FieldDoctor.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/FieldDoctor.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/GeneSplicer.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/GeneSplicer.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Medic.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Medic.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/OperationsExpert.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/OperationsExpert.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Player.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Player.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Researcher.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Researcher.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Scientist.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Scientist.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Virologist.cpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/sources/Virologist.hpp">
+			<Option target="pandemic_b"/>
+		</Unit>
+		<Unit filename="/home/shahak/CLionProjects/pandemic-b/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
