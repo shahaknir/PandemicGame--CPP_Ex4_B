@@ -1,29 +1,36 @@
-/*
- * Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_GENESPLICER_HPP
+#define EX4_PA_GENESPLICER_HPP
+
 
 #pragma once
 
-#include <iostream>
-#include <stdexcept>
+#include <stdio.h>
 #include "Player.hpp"
-using namespace std;
+#include "Board.hpp"
+#include "City.hpp"
 
-namespace pandemic{
-    
-    class GeneSplicer : public Player{
 
-        public:
+namespace pandemic
+{
+    class GeneSplicer : public Player
+    {
+    public:
+        GeneSplicer(Board board, City city);
 
-            GeneSplicer(Board b, City c);
+        // Returns Player's Role in the Game - has no use in Player
+        string role() override;
 
-            // Returns Player's Role in the Game - has no use in Player
-            static string role();
-
-            // Can find cure with any 5 cards
-            GeneSplicer& discover_cure(Color color) override;
+        // Can find cure with any 5 cards
+        void discover_cure(Color color) override;
 
     };
-
 }
 
+
+
+
+#endif //EX4_PA_GENESPLICER_HPP

@@ -1,23 +1,26 @@
-/*
- *  Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_OPERATIONSEXPERT_HPP
+#define EX4_PA_OPERATIONSEXPERT_HPP
+
 
 #pragma once
 
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
-
-namespace pandemic{
-
-    class OperationsExpert : public Player{
-
+namespace pandemic
+{
+    class OperationsExpert: public Player
+    {
     public:
+        OperationsExpert(Board b, City c);
 
-
-        OperationsExpert(Board _board, City _c);
         // Returns Player's Role in the Game - has no use in Player
-        static string role();
+        string role() override;
 
         // can build a Research Station in any city he is currently in without throwing any card
         OperationsExpert& build() override;
@@ -25,3 +28,6 @@ namespace pandemic{
     };
 
 }
+
+
+#endif //EX4_PA_OPERATIONSEXPERT_HPP

@@ -1,12 +1,19 @@
-/*
- *  Created by Shahak Nir on 07/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_CITY_HPP
+#define EX4_PA_CITY_HPP
+
 #pragma once
 
-
 #include <map>
+#include <string>
+#include "Color.hpp"
 
-using namespace std;
+using std::map;
+using std::string;
+
 
 enum City
 {
@@ -58,9 +65,7 @@ enum City
     Tehran,
     Tokyo,
     Washington
-
 };
-
 static map<string, City> cityEnumMap{ {"Algiers", City::Algiers}, {"Atlanta", City::Atlanta},
                                       {"Baghdad", City::Baghdad}, {"Bangkok", City::Bangkok},
                                       {"Beijing", City::Beijing}, {"Beijing", City::Beijing},
@@ -83,3 +88,5 @@ static map<string, City> cityEnumMap{ {"Algiers", City::Algiers}, {"Atlanta", Ci
                                       {"StPetersburg", City::StPetersburg}, {"Sydney", City::Sydney}, {"Taipei", City::Taipei},
                                       {"Tehran", City::Tehran}, {"Tokyo", City::Tokyo}, {"Washington", City::Washington}
 };
+
+#endif //EX4_PA_CITY_HPP

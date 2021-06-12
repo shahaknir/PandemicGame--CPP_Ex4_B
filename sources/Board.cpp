@@ -1,85 +1,75 @@
 //
-// Created by Shahak Nir on 07/05/2021.
+// Created by shahak on 12/06/2021.
 //
 
-#include <stdexcept>
-#include <string>
-#include <map>
-
-
 #include "Board.hpp"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
-namespace pandemic{
 
-    // Constructor
-    Board::Board(){
-        setCitiesOnBoard();
-        for (int i=0;i<4;i++){
-            this->diseaseEradicate[i] = false;
+using namespace pandemic;
+
+Board::Board() {
+    readCountries();
+}
+
+void Board::remove_cures() {
+
+}
+
+
+citiesMap Board::get_cities_map(){
+    return this->_citiesMap;
+}
+
+void Board::readCountries(){
+    ifstream file("../cities_map.txt");
+    string row;
+    string word, cityStr, colorStr, neighbour;
+
+    while (std::getline(file, row)) {
+        istringstream iss(row);
+
+        city_node cityNode;
+        iss >> cityStr;
+
+        iss >> colorStr;
+        cityNode.color = colorEnumMap.at(colorStr);
+        while(iss >> word) {
+            iss >> neighbour;
+            cityNode.neighbours.push_back(cityEnumMap.at(neighbour));
         }
-//        for(auto p : playersLocOnBoard){
-//
-//        }
+        cityNode.infection_level = 0;
+        this->_citiesMap[cityEnumMap.at(cityStr)] = cityNode;
     }
+}
 
 
-    void Board::setCitiesOnBoard(){
-        ifstream file("../cities_map.txt");
-        string row, word, cityStr, colorStr, neighbor;
+bool Board::is_clean() {
+    return false;
+}
 
-        while (std::getline(file, row)) {
-            istringstream iss(row);
+bool Board::isBuilt(City city) {
+    return false;
+}
 
-            cityNode cityInfo;
-            iss >> cityStr;
+bool Board::isCured(Color color) {
+    return false;
+}
 
-            iss >> colorStr;
-            cityInfo.cityColor = colorEnumMap.at(colorStr);
-            while(iss >> word) {
-                iss >> neighbor;
-                cityInfo.neighbors.push_back(cityEnumMap.at(neighbor));
-            }
-            cityInfo.diseaseLv = 0;
-            this->citiesMapBoard[cityEnumMap.at(cityStr)] = cityInfo;
-        }
+int &Board::operator[](City city) {
+    try{
+        return _citiesMap.at(city).infection_level;
+    }catch(const std::out_of_range& e) {
+        _citiesMap[city].infection_level = 0;
+        return _citiesMap.at(city).infection_level;
+//            throw ("city dosen't exist");
     }
+}
 
-    // Boolean is the board clean of pandemics
-    bool Board::is_clean(){
-        for (int i=0;i<4;i++) {
-            if(diseaseEradicate[i]){
-                return false;
-            }
-        }
-        if(!isblank(playersLocOnBoard)){
-            return false;
-        }
-        return true;
-    }
-
-    // Removes cures that were found
-    void Board::remove_cures(){
-        for(int i=0; i<4; i++) {
-            if (diseaseEradicate[i]) {
-                diseaseEradicate[i] = false;
-            }
-        }
-    }
-
-    // [] Operator reading and writing
-    int & Board::operator[](City city){
-        try{
-            return this -> citiesMapBoard.at(city).diseaseLv;
-        }catch(const std::out_of_range){
-            citiesMapBoard[city].diseaseLv = 0;
-            return citiesMapBoard.at(city).diseaseLv;
-        }
-    }
-
-    // Ostream Operator
-    ostream& operator<<(ostream& os, const Board& b){
-        return os;
-    }
+ostream &pandemic::operator<<(ostream &out, const Board &num) {
+    return out;
 }

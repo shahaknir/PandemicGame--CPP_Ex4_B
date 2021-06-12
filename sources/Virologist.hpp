@@ -1,29 +1,35 @@
-/*
- *  Created by Shahak Nir on 07/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
 
-#ifndef PANDEMIC_VIROLOGIST_HPP
-#define PANDEMIC_VIROLOGIST_HPP
+#ifndef EX4_PA_VIROLOGIST_HPP
+#define EX4_PA_VIROLOGIST_HPP
 
+
+#pragma once
+
+#include <stdio.h>
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
 
-namespace pandemic{
-
-    class Virologist : public Player{
-
+namespace pandemic
+{
+    class Virologist : public Player
+    {
     public:
-
-        Virologist(Board b, City c);
+        Virologist(Board board, City city);
 
         // Returns Player's Role in the Game - has no use in Player
-        static string role();
+        string role() override;
 
         // Can Cure Disease with only throwing the city's card
-        Player& treat(City city);
+        Virologist& treat(City city) override;
     };
-
 }
 
-#endif //PANDEMIC_VIROLOGIST_HPP
+
+
+
+#endif //EX4_PA_VIROLOGIST_HPP

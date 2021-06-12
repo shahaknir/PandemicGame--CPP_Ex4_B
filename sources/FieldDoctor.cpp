@@ -1,14 +1,15 @@
 //
-// Created by Shahak Nir on 04/05/2021.
+// Created by shahak on 12/06/2021.
 //
 
 #include "FieldDoctor.hpp"
 
 using namespace std;
-
 namespace pandemic{
 
-    FieldDoctor::FieldDoctor(Board& b, City c):Player(b, c){}
+    FieldDoctor::FieldDoctor(Board board, City city) : Player(board, city) {
+
+    }
 
     // Returns Player's Role in the Game - has no use in Player
     string FieldDoctor::role(){
@@ -21,11 +22,11 @@ namespace pandemic{
 
     //FieldDoctor Ability to Treat Neighbor Cities
     FieldDoctor& FieldDoctor::treat(City city) {
-        City c_city = this->currCity;
-        Board& _board = this->board;
-        if(_board.citiesMapBoard.at(c_city).neighbors.at(city) != 0) {
-            _board.citiesMapBoard.at(city).diseaseLv -= 1;
-        }
+//        City c_city = this->currCity;
+//        Board& _board = this->board;
+//        if(_board.citiesMapBoard.at(c_city).neighbors.at(city) != 0) {
+//            _board.citiesMapBoard.at(city).diseaseLv -= 1;
+//        }
         return *this;
     }
 

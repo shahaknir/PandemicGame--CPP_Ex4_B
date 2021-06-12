@@ -1,24 +1,27 @@
-/*
- *  Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_MEDIC_HPP
+#define EX4_PA_MEDIC_HPP
 
 
 #pragma once
 
+#include <stdio.h>
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
 
-namespace pandemic{
-
-    class Medic : public Player{
-
+namespace pandemic
+{
+    class Medic : public Player
+    {
     public:
-
-        Medic(Board b, City c);
-
+        Medic(Board board, City city);
         // Returns Player's Role in the Game - has no use in Player
-        static string role();
+        string role() override;
 
         // When treating - get disease level to 0
         Medic& treat(City city) override;
@@ -32,6 +35,9 @@ namespace pandemic{
 
 
     };
-
 }
 
+
+
+
+#endif //EX4_PA_MEDIC_HPP

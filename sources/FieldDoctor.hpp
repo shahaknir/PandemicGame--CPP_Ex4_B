@@ -1,28 +1,35 @@
-/*
- * Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_FIELDDOCTOR_HPP
+#define EX4_PA_FIELDDOCTOR_HPP
 
 
 #pragma once
 
+#include <stdio.h>
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
 
-namespace pandemic{
-    
-    class FieldDoctor : virtual public Player{
+namespace pandemic
+{
+    class FieldDoctor : public Player
+    {
+    public:
+        FieldDoctor(Board board, City city);
 
-        public:
+        // Returns Player's Role in the Game - has no use in Player
+        string role() override;
 
-            FieldDoctor(Board& b, City c);
-
-            // Returns Player's Role in the Game - has no use in Player
-            static string role();
-
-            //FieldDoctor Ability to Treat Neighbor Cities
-            FieldDoctor& treat(City city) override;
-
+        //FieldDoctor Ability to Treat Neighbor Cities
+        FieldDoctor& treat(City city) override;
     };
-
 }
+
+
+
+
+#endif //EX4_PA_FIELDDOCTOR_HPP

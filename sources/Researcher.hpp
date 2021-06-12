@@ -1,28 +1,34 @@
-/*
- *  Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_RESEARCHER_HPP
+#define EX4_PA_RESEARCHER_HPP
+
 
 #pragma once
 
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
 
-namespace pandemic{
-
-    class Researcher : public Player{
-
+namespace pandemic
+{
+    class Researcher : public Player
+    {
     public:
-
-        Researcher(Board b, City c);
+        Researcher(Board board, City city);
 
         // Returns Player's Role in the Game - has no use in Player
-        static string role();
+        string role() override;
 
         // Can find cure without having a research station
-        Researcher& discover_cure(Color color) override;
-
+        void discover_cure(Color color) override;
     };
-
 }
 
+
+
+
+#endif //EX4_PA_RESEARCHER_HPP

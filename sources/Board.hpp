@@ -1,71 +1,55 @@
-/*
- * Created by Shahak Nir on 04/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PB_BOARD_H
+#define EX4_PB_BOARD_H
+
 
 #pragma once
 
-#include <iostream>
-#include <stdexcept>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <unordered_map>
-#include <map>
-#include <vector>
-
-#include "Player.hpp"
 #include "City.hpp"
 #include "Color.hpp"
+#include <iostream>
+#include <map>
+#include <string>
+#include <vector>
 
-
-
-//using namespace pandemic;
-using namespace std;
+using std::ostream;
+using std::string;
+using std::map;
+using std::vector;
 
 typedef struct{
-    City city;
-    Color cityColor;
-    int diseaseLv;
-    vector<City> neighbors;
-    bool RStationFlag;
-}cityNode;
+    int infection_level;
+    vector<City> neighbours;
+    Color color;
+    bool research_station;
+}city_node;
+
+typedef map<City, city_node> citiesMap;
 
 
+namespace pandemic {
+    class Board {
+    private:
+        citiesMap _citiesMap;
 
+        void readCountries();
 
+        bool cures[4];
 
-namespace pandemic{
-
-    class Board
-    {
     public:
-        typedef map<City, cityNode> citiesMap;
-        typedef map <Player, City> playersLoc;
 
-        citiesMap citiesMapBoard;
-        void setCitiesOnBoard();
-        bool diseaseEradicate[4];
-        int playersLocOnBoard;
-
-
-
-            // Constructor
-            Board();
-
-            // Boolean is the board clean of pandemics
-            bool is_clean();
-
-            // Removes cures that were found
-            void remove_cures();
-
-            // [] Operator reading and writing
-            int & operator[](City city);
-
-            // Ostream Operator
-            friend ostream& operator<<(ostream& os, const Board& b);
-
+        Board();
+        citiesMap get_cities_map();
+        void remove_cures();
+        bool is_clean();
+        bool isBuilt(City city);
+        bool isCured(Color color);
+        int & operator[](City city);
+        friend ostream& operator<< (ostream& out, const Board& num);
     };
-
 }
 
-
+#endif //EX4_PB_BOARD_H

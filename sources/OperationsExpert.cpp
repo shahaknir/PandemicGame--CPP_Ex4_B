@@ -1,15 +1,12 @@
 //
-// Created by Shahak Nir on 04/05/2021.
+// Created by shahak on 12/06/2021.
 //
 
 #include "OperationsExpert.hpp"
-
-using namespace std;
-
 namespace pandemic{
+    OperationsExpert::OperationsExpert(pandemic::Board b, City c) : Player(b, c) {
 
-    OperationsExpert::OperationsExpert(Board _board, City _c): Player(_board, _c){}
-
+    }
     // Returns Player's Role in the Game - has no use in Player
     string OperationsExpert::role(){
         string oerole;
@@ -21,11 +18,11 @@ namespace pandemic{
 
     // can build a Research Station in any city he is currently in without throwing any card"
     OperationsExpert& OperationsExpert::build(){
-        City city = this->currCity;
-        Board& _board = this->board;
-        if(!_board.citiesMapBoard.at(city).RStationFlag) {
-            _board.citiesMapBoard.at(city).RStationFlag = true;
-        }
+//        City city = this->currCity;
+//        Board& _board = this->board;
+//        if(!_board.citiesMapBoard.at(city).RStationFlag) {
+//            _board.citiesMapBoard.at(city).RStationFlag = true;
+//        }
         return *this;
     }
 

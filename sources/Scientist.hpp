@@ -1,28 +1,37 @@
-/*
- *  Created by Shahak Nir on 07/05/2021.
- */
+//
+// Created by shahak on 12/06/2021.
+//
+
+#ifndef EX4_PA_SCIENTIST_HPP
+#define EX4_PA_SCIENTIST_HPP
+
 
 #pragma once
 
-#include <iostream>
-#include <stdexcept>
-
+#include <stdio.h>
 #include "Player.hpp"
+#include "Board.hpp"
+#include "City.hpp"
 
-using namespace std;
 
-namespace pandemic{
-    
-    class Scientist : public Player{
+namespace pandemic
+{
+    class Scientist : public Player
+    {
+        int n;
 
-        public:
-            int n;
-            Scientist(Board board, City city, int num);
-            // Returns Player's Role in the Game - has no use in Player
-            static string role();
-            // Can discover cure with only n cards as given in the constructor
-            Scientist& discover_cure(Color color);
+    public:
+        Scientist(Board board, City city, int num);
+        // Returns Player's Role in the Game - has no use in Player
+        string role() override;
+        // Can discover cure with only n cards as given in the constructor
+        void discover_cure(Color color) override;
 
     };
-
 }
+
+
+
+
+
+#endif //EX4_PA_SCIENTIST_HPP
