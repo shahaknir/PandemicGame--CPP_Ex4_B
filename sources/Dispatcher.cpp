@@ -21,13 +21,11 @@ namespace pandemic{
     }
 
     // Dispatcher can fly directly to where ever he wish
-    // if there ia a research station in his current city
+    // if there is a research station in his current city
     Dispatcher& Dispatcher::fly_direct(City city){
-//        Board _b = this->board;
-//        City _c = this->currCity;
-//        if(_b.citiesMapBoard.at(_c).RStationFlag){
-//            this->currCity = city;
-//        }
+        if(board.get_cities_map().at(currCity).research_station){
+            Player::fly_direct(city);
+        }
         return *this;
     }
 }

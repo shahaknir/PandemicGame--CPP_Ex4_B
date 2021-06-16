@@ -17,6 +17,10 @@
 
 using std::string;
 using std::vector;
+enum has_card{
+    on,
+    off
+};
 
 namespace pandemic
 {
@@ -25,7 +29,7 @@ namespace pandemic
     protected:
         City currCity;
         Board board = Board();
-        vector<City> cards;
+        map<City, has_card> cards;
 
     public:
 
@@ -52,6 +56,8 @@ namespace pandemic
         virtual Player& build();
 
         virtual Player& treat(City city);
+
+        virtual void throwCard(City city);
 
     };
 

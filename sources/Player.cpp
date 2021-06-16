@@ -39,6 +39,11 @@ namespace pandemic
     }
 
     Player &Player::fly_direct(City city) {
+        if(!cards[city]){
+            return *this;
+        }
+        this->throwCard(city);
+        this->currCity = city;
         return *this;
     }
 
@@ -56,5 +61,17 @@ namespace pandemic
 
     Player &Player::treat(City city) {
         return *this;
+    }
+
+    void Player::throwCard(City city) {
+        int index = 0;
+        for(auto itr : cards){
+            if(itr.first != city){
+                index++;
+            }else{
+                break;
+            }
+        }
+        cards[city] = off;
     }
 }
